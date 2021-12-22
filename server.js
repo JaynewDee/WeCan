@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const api = require('./routes/index')
+const path = require('path')
 
 const PORT = process.env.PORT || 3000;
 
@@ -13,7 +14,7 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use('/api', api)
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wecan", {
      useNewUrlParser: true,
      useFindAndModify: false,
      useUnifiedTopology: true
