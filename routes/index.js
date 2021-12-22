@@ -1,9 +1,7 @@
 const express = require('express');
-
-const exerciseRouter = require('./exercises')
-
 const app = express();
+const workoutRouter = require('./workouts')
 
-app.use('/exercises', exerciseRouter);
+app.use('/workouts', workoutRouter);
 
 module.exports = app;
