@@ -17,6 +17,8 @@ app.use('/api', api)
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wecan", {
      useNewUrlParser: true,
      useFindAndModify: false,
+     useUnifiedTopology: true,
+     useCreateIndex: true
 });
 
 app.listen(PORT, () => {
